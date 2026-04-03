@@ -161,8 +161,7 @@ lead_vst/
 │   └── StandaloneApp.cpp        # Custom standalone app with macOS menu
 ├── Assets/
 │   ├── icon_1024.png            # App icon source
-│   ├── LeadSynth.icns           # Multi-resolution macOS icon
-│   └── KnightRider_LeadSynth.mid # Knight Rider MIDI arrangement
+│   └── LeadSynth.icns           # Multi-resolution macOS icon
 ├── scripts/                     # Build and install scripts
 ├── JUCE/                        # JUCE framework
 └── CMakeLists.txt               # Build configuration
