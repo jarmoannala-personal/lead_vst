@@ -1,0 +1,25 @@
+# Build output
+build/
+
+# JUCE framework (download separately)
+JUCE/
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+
+# Python
+__pycache__/
+*.pyc
+
+# Plugin builds (installed copies)
+*.vst3
+*.component
