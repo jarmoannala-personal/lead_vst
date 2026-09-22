@@ -138,18 +138,21 @@ private:
     {
         // ================================================================
         // 001 — Analog Lead (default smooth lead, Pink Floyd / MMEB style)
-        //       Moog-style 24dB, warm and singing
+        //       Moog-style 24dB, warm and singing. Inspired by
+        //       "Pleasure and Pain" (Manfred Mann), "Shine On You
+        //       Crazy Diamond" (Pink Floyd). Dark filter, vibrato,
+        //       smooth attack, singing sustain, portamento.
         // ================================================================
         presets.push_back({
             "001 Analog Lead",
             /*osc1*/ 1, 1.0f,              // Saw, full
-            /*osc2*/ 1, 0.5f, 0, 7.0f,     // Saw, half, no coarse, +7 cents
+            /*osc2*/ 2, 0.45f, 0, 6.0f,    // Square, moderate mix for warmth + body
             /*noise*/ 0.0f,
-            /*filter*/ 8000.0f, 0.15f, 0.3f, 0.5f, 1,  // 24dB
-            /*fltEnv*/ 0.01f, 0.3f, 0.0f, 0.3f,
-            /*ampEnv*/ 0.01f, 0.1f, 0.8f, 0.3f,
-            /*lfo*/ 5.0f, 0.0f, 0,
-            /*glide*/ 0.0f,
+            /*filter*/ 3200.0f, 0.2f, 0.35f, 0.65f, 1,  // 24dB Moog, dark/warm cutoff, key tracking
+            /*fltEnv*/ 0.03f, 0.5f, 0.25f, 0.4f,  // gentle filter open on attack, settles warm
+            /*ampEnv*/ 0.03f, 0.2f, 0.85f, 0.5f,  // smooth attack, high sustain, singing release
+            /*lfo*/ 5.2f, 0.08f, 0,        // vibrato — essential for singing lead character
+            /*glide*/ 0.05f,               // short portamento for expressiveness
             /*master*/ 0.8f
         });
 
