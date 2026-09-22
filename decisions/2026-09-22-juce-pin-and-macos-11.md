@@ -1,0 +1,5 @@
+## Decision: Upgrade JUCE to 9.0.2, pin it as a git submodule, and raise the macOS deployment target to 11.0
+## Context: A dependency/security check found JUCE 8.0.12 unpinned (gitignored, shallow-cloned from master) while 9.0.2 was available, and a 10.13 deployment target that Xcode 27's libc++ warns is no longer supported.
+## Alternatives considered: Pinning the existing 8.0.12 (briefly done, then upgraded); pinning via CMake FetchContent; keeping 10.13.
+## Reasoning: 9.0.2 includes hardening against malformed WAV/AIFF/XML input, crash fixes, and a new macOS CoreAudio implementation; no JUCE 9 breaking change affects LeadSynth's code and it builds without source changes. A submodule keeps the existing add_subdirectory(JUCE) setup and offline builds, and records the exact commit. macOS 11.0 is the first release that runs on Apple Silicon and is supported by the current toolchain.
+## Trade-offs accepted: A major framework bump after v1.0.0 needs listening/host testing before the next release. macOS 10.13–10.15 users are dropped. Installer remains unsigned/unnotarized (no Developer ID for now).

@@ -1,8 +1,7 @@
 # Build output
 build/
-
-# JUCE framework (download separately)
-JUCE/
+build-universal/
+dist/
 
 # macOS
 .DS_Store

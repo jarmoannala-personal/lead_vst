@@ -99,17 +99,17 @@ Click the piano keyboard to give it focus, then play.
 
 ## Requirements
 
-- macOS with Xcode Command Line Tools
+- macOS 11.0 or later (build target) with Xcode Command Line Tools
 - CMake (install via `brew install cmake`)
-- [JUCE Framework](https://github.com/juce-framework/JUCE) — cloned into the project root as `JUCE/`
+- [JUCE Framework](https://github.com/juce-framework/JUCE) 9.0.2 — pinned as a git submodule at `JUCE/`
 
 ## Building
 
 ### Quick Start
 
 ```bash
-# Clone JUCE (if not already present)
-git clone --depth 1 https://github.com/juce-framework/JUCE.git
+# Fetch the pinned JUCE version (or clone with --recurse-submodules)
+git submodule update --init --depth 1
 
 # Build everything
 ./scripts/build-all.sh

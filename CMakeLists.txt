@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "Minimum macOS version")
+
 project(LeadSynth VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -33,7 +35,6 @@ target_compile_definitions(LeadSynth
         JUCE_WEB_BROWSER=0
         JUCE_USE_CURL=0
         JUCE_VST3_CAN_REPLACE_VST2=0
-        JUCE_DISPLAY_SPLASH_SCREEN=0
         JUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=1
 )
 
